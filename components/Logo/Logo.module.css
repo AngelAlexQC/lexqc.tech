@@ -1,0 +1,12 @@
+.logo {
+  display: flex;
+  align-items: center;
+  max-height: 70px;
+}
+
+@media (max-width: 600px) {
+  .h1 {
+    line-height: 20px;
+    max-width: 80px;
+  }
+}
