@@ -1,0 +1,8 @@
+.navbar {
+  display: flex;
+  padding: 5px;
+  box-shadow: 0 1px 5px 0 rgb(0 0 0 / 15%);
+}
+.logo {
+  max-height: 49px;
+}
