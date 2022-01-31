@@ -1,10 +1,11 @@
+import Image from 'next/image'
 import { FunctionComponent } from 'react'
 import styles from './Logo.module.css'
 type Props = {
   src: string
   alt?: string
-  width?: string
-  height?: string
+  width: number
+  height: number
   text?: string
 }
 const Logo: FunctionComponent<Props> = ({
@@ -14,13 +15,9 @@ const Logo: FunctionComponent<Props> = ({
   height,
   text,
 }) => {
-  const imgStyles = {
-    width: width || 'auto',
-    height: height || 'auto',
-  }
   return (
     <div className={styles.logo}>
-      <img src={src} alt={alt} style={imgStyles} />
+      <Image src={src} alt={alt} width={width} height={height} />
       {text && <h1 className={styles.h1}>{text}</h1>}
     </div>
   )

@@ -9,9 +9,16 @@ type Props = {
 }
 
 const Navbar: FunctionComponent<Props> = ({ logo, height, title }) => {
+  const heightInNumber = height ? parseInt(height) : 49
+
   return (
     <nav className={styles.navbar}>
-      <Logo src={logo} height={height} text={title}></Logo>
+      <Logo
+        src={logo}
+        height={heightInNumber}
+        width={heightInNumber}
+        text={title}
+      ></Logo>
     </nav>
   )
 }

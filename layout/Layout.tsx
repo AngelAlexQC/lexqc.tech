@@ -2,7 +2,7 @@ import Navbar from 'layout/Navbar/Navbar'
 import { FunctionComponent } from 'react'
 
 const Layout: FunctionComponent = ({ children }) => {
-  const logo = './logo.png'
+  const logo = '/logo.png'
   const height = '49px'
   const title = 'Ángel Quiroz'
   return (
