@@ -1,8 +1,19 @@
 .navbar {
   display: flex;
-  padding: 5px;
+  padding: 5px 1rem;
   box-shadow: 0 1px 5px 0 rgb(0 0 0 / 15%);
+  justify-content: space-between;
+  align-items: center;
 }
 .logo {
   max-height: 49px;
+}
+.links {
+  list-style: none;
+  display: flex;
+
+  font-size: 1rem;
+}
+.link {
+  padding: 0.5rem;
 }
