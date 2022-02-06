@@ -1,6 +1,7 @@
 import 'styles/globals.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
+import Layout from 'layout/Layout'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -13,7 +14,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <link rel="icon" href="/logo.png" />
       </Head>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   )
 }

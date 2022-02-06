@@ -2,6 +2,7 @@ import Logo from 'components/Logo/Logo'
 import Link from 'next/link'
 import { FunctionComponent } from 'react'
 import styles from './Navbar.module.css'
+import { useRouter } from 'next/router'
 
 type Props = {
   logo: string
@@ -22,11 +23,15 @@ const routes = [
     href: '/about',
     label: 'About',
   },
+  {
+    href: '/contact',
+    label: 'Contact',
+  },
 ]
 
 const Navbar: FunctionComponent<Props> = ({ logo, height, title }) => {
   const heightInNumber = height ? parseInt(height) : 49
-
+  const router = useRouter()
   return (
     <nav className={styles.navbar}>
       <Link href="/">
@@ -39,10 +44,23 @@ const Navbar: FunctionComponent<Props> = ({ logo, height, title }) => {
           ></Logo>
         </a>
       </Link>
-      <ul className={styles.links}>
+      <ul
+        className={
+          styles.links +
+          ' ' +
+          (router.asPath === '/contact' ? styles.contact_navbar : '')
+        }
+      >
         {routes.map(({ href, label }) => {
           return (
-            <li className={styles.link} key={href}>
+            <li
+              className={
+                styles.link +
+                ' ' +
+                (router.asPath === href ? styles.active : '')
+              }
+              key={href}
+            >
               <Link href={href}>
                 <a>{label}</a>
               </Link>
@@ -50,6 +68,11 @@ const Navbar: FunctionComponent<Props> = ({ logo, height, title }) => {
           )
         })}
       </ul>
+      <Link href="/contact">
+        <a className={router.asPath === '/contact' ? styles.active_link : ''}>
+          Contact
+        </a>
+      </Link>
     </nav>
   )
 }

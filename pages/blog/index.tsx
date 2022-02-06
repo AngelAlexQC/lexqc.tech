@@ -1,11 +1,10 @@
-import Layout from 'layout/Layout'
+import { NextPage } from 'next'
 
-const Blog = () => {
+const Blog: NextPage = () => {
   return (
     <>
-      <Layout>
-        <h1>Blog</h1>
-      </Layout>
+      <h1>Blog</h1>
+      <p>This is the Blog page</p>
     </>
   )
 }
