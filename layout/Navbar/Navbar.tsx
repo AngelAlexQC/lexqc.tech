@@ -53,16 +53,17 @@ const Navbar: FunctionComponent<Props> = ({ logo, height, title }) => {
       >
         {routes.map(({ href, label }) => {
           return (
-            <li
-              className={
-                styles.link +
-                ' ' +
-                (router.asPath === href ? styles.active : '')
-              }
-              key={href}
-            >
+            <li key={href}>
               <Link href={href}>
-                <a>{label}</a>
+                <a
+                  className={
+                    styles.link +
+                    ' ' +
+                    (router.asPath === href ? styles.active : '')
+                  }
+                >
+                  {label}
+                </a>
               </Link>
             </li>
           )
