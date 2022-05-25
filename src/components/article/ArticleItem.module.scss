@@ -1,0 +1,35 @@
+.articleItem {
+  align-items: center;
+  border-radius: 4px;
+  display: flex;
+  margin-left: -8px;
+  margin-bottom: 8px;
+  padding: 8px;
+  transition: transform 0.3s ease;
+  &:hover {
+    background-color: #f5f5f5;
+    transform: scale(1.02);
+    .title {
+      color: #1d73c3;
+    }
+  }
+  .image {
+    width: 250px;
+    height: 105px;
+    margin-right: 24px;
+    object-fit: contain;
+    margin-left: 4px;
+    transition: transform 0.3s ease;
+    position: relative;
+  }
+  .title {
+    color: #444;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .meta {
+    color: #535353;
+    font-size: 12px;
+    padding-top: 4px;
+  }
+}

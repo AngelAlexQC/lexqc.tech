@@ -1,0 +1,12 @@
+.articleList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  .sectionTitle {
+    color: #111;
+    font-weight: 700;
+    font-size: 18px;
+    padding-bottom: 8px;
+    padding-left: 1rem;
+  }
+}

@@ -3,4 +3,8 @@
   align-items: center;
   max-height: 70px;
   line-height: 20px;
+  transition: all 0.3s ease;
+}
+.logo:hover {
+  transform: scale(1.1);
 }
